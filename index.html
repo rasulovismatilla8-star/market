@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechParts — kompyuter ehtiyot qismlari: protsessor, videokarta, xotira, ona plata va boshqalar. Kafolat va tez yetkazib berish.">
+  <title>TechParts — Kompyuter ehtiyot qismlari do'koni</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="TechParts bosh sahifa">
+        <span class="logo__mark">⚙</span>
+        <span class="logo__text">Tech<b>Parts</b></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menyuni ochish">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="nav" id="main-nav" aria-label="Asosiy menyu">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#categories">Kategoriyalar</a></li>
+          <li><a class="nav__link" href="#products">Mahsulotlar</a></li>
+          <li><a class="nav__link" href="#benefits">Afzalliklar</a></li>
+          <li><a class="nav__link" href="#contact">Aloqa</a></li>
+        </ul>
+      </nav>
+
+      <a href="#products" class="cart" aria-label="Savat">
+        🛒 <span class="cart__count" id="cart-count" aria-live="polite">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__badge">Yangi avlod komponentlari</p>
+          <h1 class="hero__title" id="hero-title">Kompyuteringiz uchun <span class="hero__accent">eng yaxshi detallar</span></h1>
+          <p class="hero__text">Protsessor, videokarta, xotira va boshqa ehtiyot qismlar — original, kafolatli va hamyonbop narxlarda. Toshkent bo'ylab bir kunda yetkazib beramiz.</p>
+          <div class="hero__actions">
+            <a href="#products" class="btn btn--primary">Mahsulotlarni ko'rish</a>
+            <a href="#contact" class="btn btn--outline">Maslahat olish</a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__chip">CPU</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KATEGORIYALAR -->
+    <section class="section" id="categories" aria-labelledby="categories-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="categories-title">Kategoriyalar</h2>
+          <p class="section__subtitle">Kerakli detalni tez toping</p>
+        </header>
+
+        <ul class="categories">
+          <li class="categories__item"><a class="card-link" href="#products" data-filter-link="cpu"><span class="card-link__icon">🧠</span><span class="card-link__name">Protsessorlar</span></a></li>
+          <li class="categories__item"><a class="card-link" href="#products" data-filter-link="gpu"><span class="card-link__icon">🎮</span><span class="card-link__name">Videokartalar</span></a></li>
+          <li class="categories__item"><a class="card-link" href="#products" data-filter-link="ram"><span class="card-link__icon">💾</span><span class="card-link__name">Operativ xotira</span></a></li>
+          <li class="categories__item"><a class="card-link" href="#products" data-filter-link="ssd"><span class="card-link__icon">⚡</span><span class="card-link__name">SSD disklar</span></a></li>
+          <li class="categories__item"><a class="card-link" href="#products" data-filter-link="motherboard"><span class="card-link__icon">🔌</span><span class="card-link__name">Ona platalar</span></a></li>
+          <li class="categories__item"><a class="card-link" href="#products" data-filter-link="psu"><span class="card-link__icon">🔋</span><span class="card-link__name">Quvvat bloklari</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MAHSULOTLAR -->
+    <section class="section section--alt" id="products" aria-labelledby="products-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="products-title">Mashhur mahsulotlar</h2>
+          <p class="section__subtitle">Eng ko'p sotilayotgan komponentlar</p>
+        </header>
+
+        <div class="filters" role="group" aria-label="Mahsulotlarni filtrlash">
+          <button class="filters__btn filters__btn--active" type="button" data-filter="all">Barchasi</button>
+          <button class="filters__btn" type="button" data-filter="cpu">Protsessor</button>
+          <button class="filters__btn" type="button" data-filter="gpu">Videokarta</button>
+          <button class="filters__btn" type="button" data-filter="ram">Xotira</button>
+          <button class="filters__btn" type="button" data-filter="ssd">SSD</button>
+          <button class="filters__btn" type="button" data-filter="motherboard">Ona plata</button>
+          <button class="filters__btn" type="button" data-filter="psu">Quvvat bloki</button>
+        </div>
+
+        <ul class="products">
+          <li class="products__item" data-category="cpu">
+            <article class="product">
+              <div class="product__image" aria-hidden="true">🧠</div>
+              <p class="product__category">Protsessor</p>
+              <h3 class="product__name">Intel Core i5-13400F</h3>
+              <p class="product__specs">10 yadro · 4.6 GHz · LGA1700</p>
+              <p class="product__price">2 450 000 so'm</p>
+              <button class="btn btn--primary btn--block" type="button" data-add-to-cart>Savatga qo'shish</button>
+            </article>
+          </li>
+
+          <li class="products__item" data-category="cpu">
+            <article class="product">
+              <div class="product__image" aria-hidden="true">🧠</div>
+              <p class="product__category">Protsessor</p>
+              <h3 class="product__name">AMD Ryzen 5 7600</h3>
+              <p class="product__specs">6 yadro · 5.1 GHz · AM5</p>
+              <p class="product__price">2 700 000 so'm</p>
+              <button class="btn btn--primary btn--block" type="button" data-add-to-cart>Savatga qo'shish</button>
+            </article>
+          </li>
+
+          <li class="products__item" data-category="gpu">
+            <article class="product">
+              <div class="product__image" aria-hidden="true">🎮</div>
+              <p class="product__category">Videokarta</p>
+              <h3 class="product__name">NVIDIA GeForce RTX 4060</h3>
+              <p class="product__specs">8 GB GDDR6 · DLSS 3</p>
+              <p class="product__price">4 300 000 so'm</p>
+              <button class="btn btn--primary btn--block" type="button" data-add-to-cart>Savatga qo'shish</button>
+            </article>
+          </li>
+
+          <li class="products__item" data-category="gpu">
+            <article class="product">
+              <div class="product__image" aria-hidden="true">🎮</div>
+              <p class="product__category">Videokarta</p>
+              <h3 class="product__name">AMD Radeon RX 7600</h3>
+              <p class="product__specs">8 GB GDDR6 · RDNA 3</p>
+              <p class="product__price">3 700 000 so'm</p>
+              <button class="btn btn--primary btn--block" type="button" data-add-to-cart>Savatga qo'shish</button>
+            </article>
+          </li>
+
+          <li class="products__item" data-category="ram">
+            <article class="product">
+              <div class="product__image" aria-hidden="true">💾</div>
+              <p class="product__category">Operativ xotira</p>
+              <h3 class="product__name">Kingston Fury 16GB DDR5</h3>
+              <p class="product__specs">5600 MHz · CL36</p>
+              <p class="product__price">850 000 so'm</p>
+              <button class="btn btn--primary btn--block" type="button" data-add-to-cart>Savatga qo'shish</button>
+            </article>
+          </li>
+
+          <li class="products__item" data-category="ssd">
+            <article class="product">
+              <div class="product__image" aria-hidden="true">⚡</div>
+              <p class="product__category">SSD</p>
+              <h3 class="product__name">Samsung 980 1TB NVMe</h3>
+              <p class="product__specs">3500 MB/s · M.2 PCIe 3.0</p>
+              <p class="product__price">1 100 000 so'm</p>
+              <button class="btn btn--primary btn--block" type="button" data-add-to-cart>Savatga qo'shish</button>
+            </article>
+          </li>
+
+          <li class="products__item" data-category="motherboard">
+            <article class="product">
+              <div class="product__image" aria-hidden="true">🔌</div>
+              <p class="product__category">Ona plata</p>
+              <h3 class="product__name">ASUS PRIME B760M-K</h3>
+              <p class="product__specs">LGA1700 · DDR5 · mATX</p>
+              <p class="product__price">1 650 000 so'm</p>
+              <button class="btn btn--primary btn--block" type="button" data-add-to-cart>Savatga qo'shish</button>
+            </article>
+          </li>
+
+          <li class="products__item" data-category="psu">
+            <article class="product">
+              <div class="product__image" aria-hidden="true">🔋</div>
+              <p class="product__category">Quvvat bloki</p>
+              <h3 class="product__name">Corsair CV650 650W</h3>
+              <p class="product__specs">80+ Bronze · Non-modular</p>
+              <p class="product__price">780 000 so'm</p>
+              <button class="btn btn--primary btn--block" type="button" data-add-to-cart>Savatga qo'shish</button>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- AFZALLIKLAR -->
+    <section class="section" id="benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="section__title" id="benefits-title">Nima uchun TechParts?</h2>
+          <p class="section__subtitle">Ishonchli do'kon — sifatli xizmat</p>
+        </header>
+
+        <ul class="benefits">
+          <li class="benefit">
+            <span class="benefit__icon" aria-hidden="true">✅</span>
+            <h3 class="benefit__title">Original mahsulot</h3>
+            <p class="benefit__text">Barcha detallar rasmiy yetkazib beruvchilardan keladi.</p>
+          </li>
+          <li class="benefit">
+            <span class="benefit__icon" aria-hidden="true">🛡️</span>
+            <h3 class="benefit__title">12 oygacha kafolat</h3>
+            <p class="benefit__text">Nosozlik bo'lsa, tezda almashtirib beramiz.</p>
+          </li>
+          <li class="benefit">
+            <span class="benefit__icon" aria-hidden="true">🚚</span>
+            <h3 class="benefit__title">Tez yetkazib berish</h3>
+            <p class="benefit__text">Toshkent bo'ylab buyurtmani shu kunning o'zida olib boramiz.</p>
+          </li>
+          <li class="benefit">
+            <span class="benefit__icon" aria-hidden="true">🛠️</span>
+            <h3 class="benefit__title">Bepul maslahat</h3>
+            <p class="benefit__text">Mutaxassislarimiz mos komponentlarni tanlashga yordam beradi.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ALOQA -->
+    <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="contact__info">
+          <h2 class="section__title" id="contact-title">Bog'lanish</h2>
+          <p class="section__subtitle">Savolingiz bormi? Raqamingizni qoldiring, biz sizga qo'ng'iroq qilamiz.</p>
+          <address class="contact__address">
+            <p>📍 Toshkent sh., Chilonzor tumani</p>
+            <p>📞 <a class="link" href="tel:+998901234567">+998 90 123 45 67</a></p>
+            <p>✉️ <a class="link" href="mailto:info@techparts.uz">info@techparts.uz</a></p>
+            <p>🕘 Har kuni: 09:00 — 20:00</p>
+          </address>
+        </div>
+
+        <form class="form" id="contact-form" novalidate>
+          <div class="form__group">
+            <label class="form__label" for="name">Ismingiz</label>
+            <input class="form__input" type="text" id="name" name="name" placeholder="Ismingizni kiriting" required autocomplete="name">
+            <p class="form__error" id="name-error" role="alert"></p>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="phone">Telefon raqam</label>
+            <input class="form__input" type="tel" id="phone" name="phone" placeholder="+998 90 123 45 67" required autocomplete="tel">
+            <p class="form__error" id="phone-error" role="alert"></p>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="message">Xabar</label>
+            <textarea class="form__input form__input--textarea" id="message" name="message" rows="4" placeholder="Qanday detal kerak?"></textarea>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit">Yuborish</button>
+          <p class="form__success" id="form-success" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">© <span id="year">2026</span> TechParts. Barcha huquqlar himoyalangan.</p>
+      <a class="footer__link" href="#top">Yuqoriga ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>
